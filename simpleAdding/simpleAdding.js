@@ -46,6 +46,10 @@ console.log(result); // 21
 **/
 
 function simpleAdding(a) {
-	//Code here
-
-}
+	var sum = 0;
+	for (i = 0 ; i <= a ; i++ ){
+		sum += i;
+		return sum;
+	}
+};
+simpleAdding(6);
