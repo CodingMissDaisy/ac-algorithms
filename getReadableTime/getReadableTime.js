@@ -38,9 +38,20 @@ console.log(result) // -1
 
 **/
 
+function getReadableTime(minutes){
+	var time = {
+		day :0,
+		minute : 0,
+		day: 0
+	};
+	var totalHour = Math.floor(minutes / 60);
+	var addMinute = minutes - (totalHours * 60);
+	var addDay = Math.floor(totalHours / 24);
+	var remainingTime = totalHours - (addDay * 24);
+	time.hour = remainingTime;
+	time.minute = addMinute;
+	console.log(time);
+};
+getReadableTime(200);
 
 
-function getReadableTime(minutes) {
-	//Your code here
-	
-}
