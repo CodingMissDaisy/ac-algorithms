@@ -34,6 +34,11 @@ console.log(result) // "ghimmnorstyy"
 **/
 
 function alphabetSoup(str) {
-	//Your code here
-	
+//create var to add new string, 
+//split the letters or words apart
+//alphabatize with .sort 
+//join them back together.
+	var letters = str.split("").sort().join("").trim();
+	return letters;
 }
+alphabetSoup("mangos");
