@@ -38,6 +38,7 @@ console.log(result) // -1
 **/
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 function isBigger(a, b) {
@@ -72,3 +73,11 @@ function isBigger (a,b) {
 
 isBigger(3,"hello");
 >>>>>>> 9410a70a0a1cbbbd1bcda74091881ba2a97a51cb
+=======
+
+
+function isBigger(a, b) {
+	//Your code here
+	
+}
+>>>>>>> 877fe89d7b0d4fda1b1394bd7bb273f97c522a99

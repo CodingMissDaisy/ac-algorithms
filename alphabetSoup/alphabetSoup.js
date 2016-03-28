@@ -34,6 +34,7 @@ console.log(result) // "ghimmnorstyy"
 **/
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 function alphabetSoup(str) {
 //create var to add new string, 
 //split the letters or words apart
@@ -53,3 +54,9 @@ function alphabetSoup(str) { //Create the function the the parameter str
 	return myArray;
 }
 >>>>>>> 9410a70a0a1cbbbd1bcda74091881ba2a97a51cb
+=======
+function alphabetSoup(str) {
+	//Your code here
+	
+}
+>>>>>>> 877fe89d7b0d4fda1b1394bd7bb273f97c522a99

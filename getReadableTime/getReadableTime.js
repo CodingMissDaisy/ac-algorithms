@@ -39,6 +39,7 @@ console.log(result) // -1
 **/
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 function getReadableTime(minutes){
 	var time = {
 		day :0,
@@ -74,3 +75,11 @@ function getReadableTime(minutes) {
 
 getReadableTime(120);
 >>>>>>> 9410a70a0a1cbbbd1bcda74091881ba2a97a51cb
+=======
+
+
+function getReadableTime(minutes) {
+	//Your code here
+	
+}
+>>>>>>> 877fe89d7b0d4fda1b1394bd7bb273f97c522a99
