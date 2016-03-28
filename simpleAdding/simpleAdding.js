@@ -1,7 +1,9 @@
 /* Given an input number a, write a function simpleAdding(a)
 that calculates the sum of all numbers 
 from 0 to a, a included.
- - If a is a negative number return 0.
+ - If a is a negative number return 0. */
+
+ /*
 
 Bonus 1: If a is undefined return 0, if a is
 not a number return 0. Check out typeof() operator
@@ -47,6 +49,7 @@ console.log(result); // 21
 **/
 
 function simpleAdding(a) {
+<<<<<<< HEAD
 	var sum = 0;
 	for (i = 0 ; i <= a ; i++ ){
 		sum += i;
@@ -54,3 +57,22 @@ function simpleAdding(a) {
 	}
 };
 simpleAdding(6);
+=======
+  var sum = 0;
+  for (var i =0; i <= a ; i++) {
+    if (a === undefined) {
+    	return 0;
+    }
+    else if (typeof a !== "number") {
+    	return 0;
+    }
+    else {
+    	sum += i;
+    }
+  }
+  return sum;
+}
+
+var result = simpleAdding("hello");
+console.log(result);
+>>>>>>> 9410a70a0a1cbbbd1bcda74091881ba2a97a51cb

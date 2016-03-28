@@ -33,6 +33,7 @@ console.log(result) // "ghimmnorstyy"
 
 **/
 
+<<<<<<< HEAD
 function alphabetSoup(str) {
 //create var to add new string, 
 //split the letters or words apart
@@ -42,3 +43,13 @@ function alphabetSoup(str) {
 	return letters;
 }
 alphabetSoup("mangos");
+=======
+function alphabetSoup(str) { //Create the function the the parameter str
+	//Create a variable to hold the new array
+	//Split the string into individual strings that are just one letter
+	//Alphabetize them
+	//Rejoin them as one string and take out the spaces at the beginning
+	var myArray = str.split("").sort().join("").trim();
+	return myArray;
+}
+>>>>>>> 9410a70a0a1cbbbd1bcda74091881ba2a97a51cb
