@@ -7,8 +7,13 @@
 
 // Check out Arithmetic Operators https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators
 
+
 function factorializeIt(num) {
-  //your code here
+  var mp= 1;
+  for ( i = 1; i <= num; i++){
+    mp *= i;
+    console.log(mp);
+  }
 }
 
-factorializeIt(5);
+factorializeIt(7);
