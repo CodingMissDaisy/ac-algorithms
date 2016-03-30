@@ -30,5 +30,22 @@ console.log(result) // "oH, hELLO!!"
 **/
 
 function swapCase(str) {
-	// Your code
+	var words = "";
+	for (i = 0; i < str.length; i++){
+		if(str[i] === str[i].toLowerCase()){
+			words += str[i].toUpperCase();
+		}else {
+			words += str[i].toLowerCase();
+		}
+	}
+	console.log(words);
 }
+var string = "Hello, Today Is wednesday!";
+var switchString = swapCase(string);
+
+
+
+
+
+
+
