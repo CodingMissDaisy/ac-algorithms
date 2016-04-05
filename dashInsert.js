@@ -28,7 +28,7 @@ function dashInsert(str) {
     var dash= " ";
     var myStr= str.toString().split("");
 	for (var i = 0; i < myStr.length; i++){
-		if(myStr[i] % 2 !== 0 && myStr[i + 1] % 2 !== 0 ){
+		if(myStr[i] % 2 === 1 && myStr[i + 1] % 2 === 1 ){
 			dash += myStr[i] + "-";
 		} else {
           dash += myStr[i];
