@@ -24,7 +24,20 @@ var result = isBigger("13");
 console.log(result) // "1-3"
 
 **/
-
 function dashInsert(str) {
-	// Your code
+    var dash= " ";
+    var myStr= str.toString().split("");
+	for (var i = 0; i < myStr.length; i++){
+		if(myStr[i] % 2 !== 0 && myStr[i + 1] % 2 !== 0 ){
+			dash += myStr[i] + "-";
+		} else {
+          dash += myStr[i];
+        }
+	}
+	console.log(dash);
 }
+dashInsert("87349693769901");
+
+
+
+
