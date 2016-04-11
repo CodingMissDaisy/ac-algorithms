@@ -26,6 +26,13 @@
 //palindrome("0_0 (: /-\ :) 0-0") should return true.
 
 function palindrome(str) {
-	//your code here
+	var original = str.replace(/[\.,-\/#!$%\^&\*;:{}=\-_`~()0-9]/g,"").replace(/\s/g," ").toLowerCase();
+	var checkPalindrome = original.split('').reverse().join('');
+  if(original === checkPalindrome){
+    console.log(true);
+  } else{
+    console.log(false);
+  }
 }
+palindrome("RaceCar9%");
 
