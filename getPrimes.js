@@ -21,6 +21,38 @@ Hint: If the input number is prime you should get the number as the solution. Yo
 care of it.
 */
 
-function getPrimes() {
-	// your code
+//create an empty array to push the numbers n is divisible by
+//divide n by 2 until it can't anymore
+//divide by the next number (3) if n is still left but cant be didvisible by 2 anymore
+
+//create an empty array to push the numbers n is divisible by
+//divide n by 2 until it can't anymore.
+//divide by the next number (3) if n is still left but cant be didvisible by 2 anymore.
+//push primes to array.
+
+function getPrimes(N) {
+  function isPrime(num) {
+    if (num < 2){
+      return false;
+    }
+	for ( i = 2; i < num; i++){//Check all number less than input num
+		if (num % i === 0){
+			return false;
+        }
+    }
+    return true;
+  }
+
+  var primes=[];
+	for(var k = 2; k < N; k++){
+		if(N % k === 0){
+		   if(isPrime(k) === true){
+             primes.push(k);
+        }
+       }  
+     }
+  console.log(primes);
 }
+
+getPrimes(4847);
+
