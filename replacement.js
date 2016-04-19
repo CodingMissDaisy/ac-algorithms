@@ -15,11 +15,39 @@
 //2) String.replace() https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace
 //3) Array.join() https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/join
 
+
+//create emtpy array
+//selcet before word and change it to the after word
+//push new string
+//console log string
+
+
 function performReplace(str, before, after) {
-  //your code here
+
+var beforeArray = before.split('');
+ var afterArray = after.split('');
+  
+  
+    if(beforeArray[0] === beforeArray[0].toUpperCase()){
+   afterArray[0] = afterArray[0].toUpperCase();
+  } else if(beforeArray[0] === beforeArray[0].toLowerCase()){
+    afterArray[0] = afterArray[0].toLowerCase();
+  }
+  
+  var beforeWord = beforeArray.join('');
+  var afterWord = afterArray.join('');
+  
+  
+  var newStr = str.replace(beforeWord, afterWord);
+  
+  console.log(newStr);
 }
 
-performReplace("A quick brown fox jumped over the lazy dog", "jumped", "leaped");
+performReplace("A quick brown fox jumped over the lazy dog", "jumped", "Leaped");
+
+
+
+
 
 //TEST CASES
 //performReplace("Let us go to the store", "store", "mall") should return "Let us go to the mall".
