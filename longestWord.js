@@ -19,7 +19,25 @@
 // findLongestWord("What if we try a super-long word such as otorhinolaryngology") should return 19.
 
 
+//input = str with words
+//output = number -> # of letters in longest word
+
+//break up string into individual words
+//find the longest word
+//return length
+
 function findLongestWord(str) {
-  //your code here
+//Create an array to seperate string into individual words
+  var sepStr= str.split(" ");
+//Sort the words in alpha numeric order, use compare function to compare which word is biggest, and put array into ascending order
+  sepStr = sepStr.sort(function(a, b) {
+    return a.length - b.length;
+  });
+//Get the last word in the array and get its length
+  var lastWord = sepStr.pop();
+   console.log(lastWord.length);
 }
+
+findLongestWord("What if we try a super-long word such as otorhinolaryngology");
+
 
