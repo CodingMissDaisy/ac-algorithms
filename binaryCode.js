@@ -12,9 +12,24 @@
 //String.fromCharCode()
 //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/fromCharCode
 
+
+//Input = A string of binary code
+//Outpt = string of words
+
 function binaryCode(str) {
-  
+//put string into an array and split @ the spaces
+  var unicode = str.split(" ");
+  var translate = [];
+
+  for (var i = 0; i < unicode.length; i++){
+//translate unicode of 8 numbers each, into letters
+  	   translate.push(String.fromCharCode(parseInt(unicode[i], 2)));
+  }
+//join letters together
+		translate= translate.join("");
+		console.log(translate);
 }
+
 
 binaryCode("01000011 01101111 01100100 01101001 01101110 01100111 00100000 01101001 01110011 00100000 01110100 01101000 01100101 00100000 01100010 01100101 01110011 01110100 00101110");
 
