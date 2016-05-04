@@ -6,11 +6,31 @@
 
 //As an example, passing 4 to the function should return 5 because all the odd Fibonacci numbers under 4 are 1, 1, and 3.
 
+//Input = a number
+//Output = sum of the odd numbers less than the given number
 
+
+
+
+//Do While
 function sumFibonacci(num) {
-  //your code here
+var previous = 0;
+var current = 1;
+var total = 0;
+while(current <= num){
+  //use a modulo to check for odd numbers
+  if (current % 2 !==0){
+  // += those numbers to a variable
+    total+=current;
+  }
+  current += previous;
+  //Get the new previous number by subtracting the current number by the old previous number
+  previous = current - previous;
+  }
+  console.log(total);
 }
 
+sumFibonacci(1000);
 
 
 //TEST CASES
