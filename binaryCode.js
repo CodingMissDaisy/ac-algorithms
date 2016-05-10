@@ -17,6 +17,7 @@
 //Outpt = string of words
 
 function binaryCode(str) {
+
 //put string into an array and split @ the spaces
   var unicode = str.split(" ");
   var translate = [];
@@ -28,6 +29,7 @@ function binaryCode(str) {
 //join letters together
 		translate= translate.join("");
 		console.log(translate);
+
 }
 
 
