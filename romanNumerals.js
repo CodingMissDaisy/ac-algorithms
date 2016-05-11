@@ -14,9 +14,30 @@
 
 //4)Array.join() https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/join
 
+//Input = a positive number
+//Output= upper-case roman numeral letters 
+
+
+var translation =[];
+var numbers = [1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1];
+var numerals = ['M', 'CM', 'D','CD', 'C', 'XC', 'L', 'XL', 'X', 'IX', 'V', 'IV', 'I'];
+
 function speakRoman(num) {
- 	//your code here
+// For loop will loop through the numbers array 
+ 	for (var i = 0; i < numbers.length; i++){
+ //get the first number in the number array that is than num
+  	while(num >= numbers[i]){
+ //add that letter in the numbers array postion from the numerals array to our translation array
+    translation += numerals[i];
+ //subtract the number from numbers array from num to get the remainder and repeat loop
+    num -= numbers[i];
+    }
+  }
+  console.log(translation);
 }
+
+speakRoman(68);
+
 
 speakRoman(2); // "II".
 speakRoman(3); // "III".
