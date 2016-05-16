@@ -10,11 +10,33 @@
 
 //The character and its pair are paired up in an array, and all the arrays are grouped into one encapsulating array.
 
+//Input= string
+//output= characters paired in an array(inside a parent array)
+
+//Input= string
+//output= characters paired in an array(inside a parent array)
+
 function pairElement(str) {
-  //your code here
+	//empty array to push results
+	var pairs = [];
+	var elements = str.split("");
+	//pair each element with its matching DNA element
+	for (var i = 0; i < elements.length; i++){
+  	if (elements[i] === "C"){
+   			pairs.push([elements[i], "G"]);
+    } else if (elements[i] === "G"){
+    			pairs.push([elements[i], "C"]);	
+    }  else if (elements[i] === "A") {
+    		pairs.push([elements[i], "T"]);
+        } else if (elements[i] === "T"){
+        		pairs.push([elements[i], "A"]);
+        }
+  }
+	console.log(pairs);
+ 
 }
 
-pairElement("GCG");
+pairElement("TTGAG");
 
 //TEST CASES
 //pairElement("ATCGA") should return [["A","T"],["T","A"],["C","G"],["G","C"],["A","T"]].
