@@ -14,12 +14,89 @@
 //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/substr
 //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseInt
 
+//Input = an array of two arrays containing cardinal dates in YYYY-MM-DD format
+//Output = an array of the two ordinal dates in MM-DD-YYYY format
 
-function friendlyDates(arr) {
-  //your code here
+function friendlyDates(arr){
+  //array to push final elements
+var dates=[];
+//take out and seperate the dashes
+var seperate = [];
+  seperate.push(arr[0].split("-"));
+  seperate.push(arr[1].split("-"));
+  //Loop through the two dates in the array
+ for (var i = 0; i < seperate.length; i++){
+ //translate a number into its corrisponding month
+  
+  switch(parseInt(seperate[i][1])){
+    case 01 :
+          dates.push("Jan");
+          break;
+    case 02 :
+          dates.push("Feb");
+          break;
+    case 03 : 
+          dates.push("March");
+          break;
+    case 04 :
+          dates.push("April");
+          break;
+    case 05 :
+          dates.push("May");
+          break;
+    case 06 : 
+          dates.push("June");
+          break;
+    case 07 :
+          dates.push("July");
+          break;
+    case 08 :
+          dates.push("August");
+          break;
+    case 09 : 
+          dates.push("September");
+          break;
+    case 10 :
+          dates.push("October");
+          break;
+    case 11 :
+          dates.push("November");
+          break;
+    case 12 : 
+          dates.push("December");
+          break;
+    }
+//make day numbers ordinal
+   switch(parseInt(seperate[i][2])){
+    case 01 :
+    case 21 :
+    case 31 :
+          dates.push(parseInt(seperate[i][2] + "st"));
+          break;
+    case 02 :
+    case 22:
+          dates.push(parseInt(seperate[i][2] + "nd"));
+          break;
+    case 03 :
+    case 23 :
+          dates.push(parseInt(seperate[i][2] + "rd"));
+          break;
+    default:
+          dates.push(parseInt(seperate[i][2] + "th"));
+          break;
+    }
+  //push the year to the end of each array
+   dates.push(parseInt(seperate[i][0]));
+  }
+console.log(dates);
 }
 
 friendlyDates(['2016-07-01', '2016-07-04']);
+friendlyDates(["2016-12-01", "2017-02-03"]);
+friendlyDates(["2022-09-05", "2023-09-04"]);
+
+
+
 
 // TEST CASES
 
