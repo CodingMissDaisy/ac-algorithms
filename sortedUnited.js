@@ -9,13 +9,31 @@
 
 //Array.reduce()  https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce
 
-function uniteUnique(arr) {
-  //your code here
+
+
+//Input = two arrays of numbers
+//Output = one array containing the elements in original order from the first arrays and no duplicates
+function uniteUnique(arr) { 
+//empty array to push final elements to.
+ var final = [];
+//looping through all the arrays in the parameter.
+  for(var i = 0; i < arguments.length; i++){
+  //saving each array as a local variable.
+  	var num = arguments[i];
+  //looping through each individual element
+  	for(var k = 0; k < num.length; k++){
+ 	//checking if my final array already contains a specific number inside.
+    	if(final.indexOf(num[k]) === -1){
+    //if final array doesnt already contain that number, push it to final array.
+         final.push(num[k]);
+      }
+    }
+  }
+  console.log(final); 
 }
 
-
 //TEST CASES
-// uniteUnique([1, 3, 2], [5, 2, 1, 4], [2, 1]) should return [1, 3, 2, 5, 4].
-// uniteUnique([1, 3, 2], [1, [5]], [2, [4]]) should return [1, 3, 2, [5], [4]].
-// uniteUnique([1, 2, 3], [5, 2, 1]) should return [1, 2, 3, 5].
-// uniteUnique([1, 2, 3], [5, 2, 1, 4], [2, 1], [6, 7, 8]) should return [1, 2, 3, 5, 4, 6, 7, 8].
+ uniteUnique([1, 3, 2], [5, 2, 1, 4], [2, 1]); //should return [1, 3, 2, 5, 4].
+ uniteUnique([1, 3, 2], [1, [5]], [2, [4]]); //should return [1, 3, 2, [5], [4]].
+ uniteUnique([1, 2, 3], [5, 2, 1]); //should return [1, 2, 3, 5].
+uniteUnique([1, 2, 3], [5, 2, 1, 4], [2, 1], [6, 7, 8]); //should return [1, 2, 3, 5, 4, 6, 7, 8].
